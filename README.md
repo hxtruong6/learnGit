@@ -84,7 +84,10 @@ Learn git form lynda.com
   - Rename file: 
     > git mv #file1 #file2
   - Add and commit file by one step: 
-    > git commit -am "Message"
+     > git commit -am "Message"
 ## Undoing changes
   - To undo:
     > git checkout -- #nameFile
+  - Move head to the next last commit
+    > git k
+   
