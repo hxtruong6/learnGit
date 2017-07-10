@@ -50,5 +50,38 @@ Learn git form lynda.com
   > git add . 
 - Commit with a message: 
   > git commit -m "Initial commit"
+- Show information of repository
+  > git log
+- Show info of repository with conditions: 
+  > git log --since==2017-07-10
+  
+  > git log --author=="name"
+  
+  > git log --grep=="message"
+## Git concepts and architecture
+### The three trees achitecture
+  - Working-> staging index-> repository : add -> commit 
+### Workflow
+  - Working-> staging index-> repository
+  - v1
+  - _________v1
+  - __________________________v1
+  - v2_______v1_______________v1
+  - _________v2_______________v1 v2
+### Using hash value ( SHA-1)
+  - Git use algorithm Hash to get ID for each file. So each file have an unique ID.
+  - There is HEAD pointer always point to the tip of the current branch in our repository.
+## Making changes to files
+  - Show status of repository:
+    > git status
+  - Compare file in working and in repo: 
+    > git diff
+  - Compare file in stage and repo:
+    > git diff --staged
+  - Delete file:
+    > git rm #nameFile
+  - Rename file not in command: add that file to "staging index" then remove old file. Enter "git status" if file have more 50% same, git will know that is rename.
+  - Rename file: 
+    > git mv #file1 #file2
+  
 
-    
