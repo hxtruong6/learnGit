@@ -88,6 +88,12 @@ Learn git form lynda.com
 ## Undoing changes
   - To undo:
     > git checkout -- #nameFile
-  - Move head to the next last commit
-    > git k
+  - Amendind commits (last commit):
+    > git commit --amend -m "message"
+  - To see the file from the old commit
+    > git checkout ID_Hash nameFile
+  - Undo any undesired changes from old commit:
+    > git revert / git reset
+  - Undo multiple commit:
+    > 
    
