@@ -85,5 +85,6 @@ Learn git form lynda.com
     > git mv #file1 #file2
   - Add and commit file by one step: 
     > git commit -am "Message"
-  
-
+## Undoing changes
+  - To undo:
+    > git checkout -- #nameFile
