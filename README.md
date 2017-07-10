@@ -83,5 +83,7 @@ Learn git form lynda.com
   - Rename file not in command: add that file to "staging index" then remove old file. Enter "git status" if file have more 50% same, git will know that is rename.
   - Rename file: 
     > git mv #file1 #file2
+  - Add and commit file by one step: 
+    > git commit -am "Message"
   
 
