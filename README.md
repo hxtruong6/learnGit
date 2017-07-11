@@ -193,7 +193,28 @@ Learn git form lynda.com
     > git branch -d <branch_to_delete>
   - Deleting branches:
     > git branch -D <branch_to_delete>
-
+## Merging code
+  - Merging branch
+    > git branch --merged
+  - Fast-forward merged and true merged
+### Merged conflicts
+  - A conflict occurs when there are two changes to the same line or set of lines in two different commits. 
+  - Merged conflicts when Git don't know to choose which between two file tto merge.
+  - Resolving merge conflicts:  
+    * Abort merge
+      > git merge --abort
+    * resolve the conflicts manually
+    * Use a merge tool 
+  - Strategies to reduce merge conflicts
+    * Keep lines short
+    * Keep commits small and focused
+    * Beware stray small and focuesd
+      - spaces, tabs, line returns
+    * Merge ofen 
+    * Track changes to master
+    
+    
+    
     
     
     
