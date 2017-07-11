@@ -39,7 +39,7 @@ Learn git form lynda.com
       > git help
    - Show commit log: 
       > git help log
-   - Format: F ; Backward: B ; Quit: Q
+   - Forward: F ; Backward: B ; Quit: Q
 ## Getting started
 ### Initializing a repository
 - Initializing a repository: 
@@ -163,4 +163,38 @@ Learn git form lynda.com
     * Ioslate feature or sections of work
   - One working directory
   - Fast context switching
+### Create branch
+  - Create branch:
+    > git branch <name file>
+  - Switching branches
+    > git checkout <nameBranch>
+  - Check switched? :
+    > cat .git/HEAD
+      * ref: refs/heads/master -> if head in master
+      * ref: refs/heads/new_branch -> if head in branch
+   - -b means both created and switch at the same time:
+    > git checkout -b <name branch>
+### Compare branch
+  - Compare:  
+    > git diff master..new_feature
+    > git diff <branch1>..<branch2>
+    > git diff --color-words <branch1>..<branch2>
+  - Merge among branches: following step
+    > git branch --merged
+    > git checkout <branch1>
+    > git branch --merged
+    > git checkout <branch2>
+    > git branch --merged
+### Renaming branches
+  - Renaming branches:
+    > git branch -m <branch1> <branch2>
+### Deleting branches
+  - To see Git what say: 
+    > git branch -d <branch_to_delete>
+  - Deleting branches:
+    > git branch -D <branch_to_delete>
+
+    
+    
+    
   
