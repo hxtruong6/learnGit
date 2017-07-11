@@ -123,7 +123,7 @@ Learn git form lynda.com
 ### Tracking empty directories
   - Atually, git don't care abou directories. Git only track file which tracked and directories like path to detect file. So to tracking directories, we need add a new file(small) and ignore it. Following that way, git will tracking directories.
 ## Navigating the commit tree
-### Tre-ish
+### Tree-ish
   - Full SHA-1 hash
   - Short SHA-1 hash
     * at least 4 char
@@ -133,10 +133,10 @@ Learn git form lynda.com
   - Ancestry
   - Parent commit
     * HEAD^, acd2f3g4^, master^
-    * HEAD~1, HEAD~
+    * HEAD~1, HEAD ~
    - Grandparent commit
     * HEAD^^, d34rw43^^
-    * HEAD~
+    * HEAD ~
 ### Exploring tree listings
   - Show list tree
     > git ls-tree HEAD
