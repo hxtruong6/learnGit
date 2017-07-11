@@ -212,6 +212,29 @@ Learn git form lynda.com
       - spaces, tabs, line returns
     * Merge ofen 
     * Track changes to master
+## Stashing changes
+  - It's a place where we can store changes temporarily without having to commit them
+  - Save to stash:
+    > git stash save <message>
+  - Viewing stashed changed
+    > git stash list
+  - Apply stash on branch
+    > git stash show -p stash@{0}
+  - Reapply previously stashed changed with, Popping your stash removes the changes from your stash and reapplies them to your working copy.:  
+    > git stash pop
+  - Reapply the changes to your working copy and keep them in your stash with:
+    > git stash apply  
+  - Stash untracked files:
+    > git stash -u
+  - Include changes to ignored file as well by passing:
+    > git stash --all ( or -a) 
+   - Delete stash which don't need:
+    > git stash drop stash@{1}
+   - Delete all:
+    > git stash clear
+## Remotes
+
+
     
     
     
