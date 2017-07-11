@@ -86,14 +86,54 @@ Learn git form lynda.com
   - Add and commit file by one step: 
      > git commit -am "Message"
 ## Undoing changes
-  - To undo:
+  - To undo from staged:
     > git checkout -- #nameFile
-  - Amendind commits (last commit):
+  - Amending commits (last commit):
     > git commit --amend -m "message"
   - To see the file from the old commit
     > git checkout ID_Hash nameFile
-  - Undo any undesired changes from old commit:
+  - Anything that was added will be deleted, anything that was deleted will be added back in again, and anything that was modified will be changed back to its previous state:
     > git revert / git reset
-  - Undo multiple commit:
-    > 
-   
+  - Does not change staging index or working directory:
+    > git reset --soft
+  - Changes staging index to match repository, does not change working directory
+    > git reset --mixed (defalt)
+  - Changes staging index and working directory to match repository
+    > git reset --hard
+  - Delete file untracked:
+    * Show git will delete what: 
+      > git clean -n
+    * Git sure delete that file showed:
+      > git clean -f
+## Ignoring file
+### How to ignore: 
+  - Onpen place to ignore which need ignore:
+    > nano gitignore
+  - Then enter which file/foder ignore:
+    > Ex: *.txt asset/video ... 
+### Ignore tracked file
+  - After commit file to repository, we ignore file as a normal file. But file still in staging index so file will be tracked. To really ignore that file, we remove from staging index.
+  - Remove file from the staging index, not repository:
+    > git rm --cached <file>
+### Ignore file in global
+  - To ignore file global. It mean when many people work together a project and use same repository. We will ignore file for all user like as:
+    * Add all file in ".ignore_global"
+    * Then enter:
+      > git config --globel core.excludesfile ~/.gitignore_global" 
+### Tracking empty directories
+  - Atually, git don't care abou directories. Git only track file which tracked and directories like path to detect file. So to tracking directories, we need add a new file(small) and ignore it. Following that way, git will tracking directories.
+## Navigating the commit tree
+### Tre-ish
+  - Full SHA-1 hash
+  - Short SHA-1 hash
+    * at least 4 char
+    * unambiguous ( 8-10 char)
+  - HEAD pointer
+  - Branch reference, tag reference
+  - Ancestry
+  - Parent commit
+    * HEAD^, acd2f3g4^, master^
+    * HEAD~1, HEAD~
+   - Grandparent commit
+    * HEAD^^, d34rw43^^
+    * HEAD~
