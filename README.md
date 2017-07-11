@@ -137,3 +137,30 @@ Learn git form lynda.com
    - Grandparent commit
     * HEAD^^, d34rw43^^
     * HEAD~
+### Exploring tree listings
+  - Show list tree
+    > git ls-tree HEAD
+    * blod: is file
+    * tree: is directory
+    > git ls-tree <name>/<path>
+### Getting more from the commit log
+  - Show commit in one line:
+    > git log --oneline
+  - Show commit of a repo
+    > git log IDhash
+  - Show what changed in each one:
+    > git log --stat --summary
+  - More...
+### Compare commits
+  - Comparing file:
+    > git diff IDhash
+  - between two file:
+    > git diff IDhash..nameFile
+## Branching
+### Branching overview
+  - Branches are cheap
+    * Try new ideas
+    * Ioslate feature or sections of work
+  - One working directory
+  - Fast context switching
+  
